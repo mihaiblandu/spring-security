@@ -47,5 +47,7 @@ dependencies {
 }
 
 test {
+	println 'Test start.'
 	useJUnitPlatform()
+	println 'Test is done succesfuly'
 }
