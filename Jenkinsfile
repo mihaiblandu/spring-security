@@ -21,7 +21,9 @@ echo $HOME'''
 
         stage('Parallel2') {
           steps {
-            sh 'echo $HOME;'
+            sh '''echo $HOME;
+echo \'\\n\';
+cd ;'''
           }
         }
 
