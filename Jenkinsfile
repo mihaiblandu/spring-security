@@ -4,7 +4,6 @@ pipeline {
         stage('System') {
             steps {
                 sh 'pwd'
-                sh 'http --vesion'
             }
         }
         stage('Build') {
