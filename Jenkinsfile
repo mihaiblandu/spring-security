@@ -4,8 +4,6 @@ pipeline {
         stage('System') {
             steps {
                 sh 'pwd'
-                sh 'java --version'
-                sh 'http --version'
             }
         }
         stage('Build') {
