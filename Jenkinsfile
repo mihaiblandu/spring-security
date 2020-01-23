@@ -14,6 +14,16 @@ pipeline {
             sh '''pwd;
 ls -la
 echo $HOME'''
+            sh '''cat README.md;
+'''
+          }
+        }
+
+        stage('Parallel2') {
+          steps {
+            sh '''echo $HOME;
+echo \'\\n\';
+cd ;'''
           }
         }
 
