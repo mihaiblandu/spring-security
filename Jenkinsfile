@@ -8,7 +8,6 @@ pipeline {
       }
     }
 
-<<<<<<< HEAD
     stages {
         stage('Build') {
             steps {
@@ -23,13 +22,11 @@ pipeline {
                 echo 'Deploying...'
             }
         }
-=======
     stage('Deploy') {
       steps {
         sh 'ls build/libs/*.jar'
         echo 'Deploying... mother fucker'
       }
->>>>>>> 1e695cde8624e21aac630d7bf931342646bea0b9
     }
 
   }
