@@ -4,6 +4,7 @@ pipeline {
         stage('System') {
             steps {
                 sh 'pwd'
+                sh 'http --vesion'
             }
         }
         stage('Build') {
@@ -15,8 +16,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh './gradlew bootRun'
                 sh 'ls build/libs/*.jar'
+                sh './gradlew bootRun'
                 echo 'Deploying...'
             }
         }
