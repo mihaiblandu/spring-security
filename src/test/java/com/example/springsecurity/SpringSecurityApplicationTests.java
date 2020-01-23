@@ -22,4 +22,10 @@ class SpringSecurityApplicationTests {
 		assertThat(controller).isNotNull();
 	}
 
+	@Test
+	public void home() throws Exception {
+		System.out.println(controller.getHome());
+		assertThat(controller.getHome()).isNotNull();
+	}
+
 }
