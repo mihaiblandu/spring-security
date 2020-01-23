@@ -8,9 +8,8 @@ pipeline {
           sh 'http --version'
         }
       }
-  stages {
-    stage('Build') {
-      steps {
+      stage('Build') {
+        steps {
         sh './gradlew build'
         archiveArtifacts(artifacts: '**/build/libs/*.jar', fingerprint: true)
       }
