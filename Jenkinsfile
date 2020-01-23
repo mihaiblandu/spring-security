@@ -10,6 +10,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
+        sh './gradlew bootRun'
         sh 'ls build/libs/*.jar'
         echo 'Deploying...'
       }
