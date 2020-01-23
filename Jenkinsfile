@@ -21,13 +21,6 @@ pipeline {
                 echo 'Deploying...'
             }
         }
-    stage('Deploy') {
-      steps {
-        sh 'ls build/libs/*.jar'
-        echo 'Deploying... mother fucker'
-      }
-    }
-
   }
   triggers {
     pollSCM('* * * * *')
