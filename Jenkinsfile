@@ -1,5 +1,13 @@
 pipeline {
   agent any
+    stages {
+      stage('System') {
+        steps {
+          sh 'pwd'
+          sh 'java --version'
+          sh 'http --version'
+        }
+      }
   stages {
     stage('Build') {
       steps {
