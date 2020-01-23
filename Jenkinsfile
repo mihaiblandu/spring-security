@@ -7,7 +7,6 @@ pipeline {
         archiveArtifacts(artifacts: '**/build/libs/*.jar', fingerprint: true)
       }
     }
-
     stages {
         stage('Build') {
             steps {
