@@ -1,0 +1,50 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+
+
+//	compile     group: 'mysql',                     name: 'mysql-connector-java'
+
+// SPRING
+	compile     group: 'org.springframework.boot',  name: 'spring-boot-devtools'
+//	compile     group: 'org.springframework.boot',  name: 'spring-boot-starter-data-jpa'
+	compile     group: 'org.springframework.boot',  name: 'spring-boot-starter-json'
+	compile     group: 'org.springframework.boot',  name: 'spring-boot-starter-thymeleaf'
+	compile     group: 'org.springframework.boot',  name: 'spring-boot-starter-web'
+
+// THYMELEAF
+	compile     group: 'nz.net.ultraq.thymeleaf',   name: 'thymeleaf-layout-dialect',  version: '2.2.2'
+
+// WEB JAVASCRIPT LIBS
+	compile     group: 'org.webjars',               name: 'webjars-locator',  version: '0.32-1'
+	compile     group: 'org.webjars',               name: 'bootstrap',        version: '4.4.1'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
