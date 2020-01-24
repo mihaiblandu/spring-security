@@ -49,6 +49,7 @@ cat LICENSE;
         stage('Docker') {
           steps {
             sh 'docker ps -a'
+            sh 'docker build -t spring-boot-docker .'
           }
         }
 
