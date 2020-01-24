@@ -24,6 +24,7 @@ echo $HOME'''
             sh '''echo $HOME;
 echo \'\\n\';
 cd ;'''
+            sh 'docker --version;'
           }
         }
 
