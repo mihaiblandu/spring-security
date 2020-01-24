@@ -23,6 +23,7 @@ cat LICENSE;
           steps {
             sh 'echo $HOME;'
             sh 'docker --version;'
+            sh 'java -version'
           }
         }
 
