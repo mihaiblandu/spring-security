@@ -11,9 +11,8 @@ pipeline {
 
         stage('parallel') {
           steps {
-            sh '''pwd;
-ls -la
-echo $HOME'''
+            sh '''ls -la;
+'''
             sh '''cat README.md;
 '''
           }
