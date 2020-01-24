@@ -48,8 +48,8 @@ cat LICENSE;
 
         stage('Docker') {
           steps {
-            sh ' docker build -t spring-boot-docker .'
-            sh 'docker run -p 8443:8443 -p 8083:8083 spring-boot-docker'
+            sh 'docker build -t spring-boot-docker .'
+            //sh 'docker run -p 8443:8443 -p 8083:8083 spring-boot-docker'
           }
         }
 
