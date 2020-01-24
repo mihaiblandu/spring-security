@@ -37,22 +37,10 @@ cat LICENSE;
     }
 
     stage('Deploy') {
-      parallel {
-        stage('Deploy') {
-          steps {
-            sh 'ls build/libs/*.jar'
-            sh './gradlew test'
-            echo 'Deploying...'
-          }
-        }
-
-        stage('Docker') {
-          steps {
-            sh '''ls -la;
-docker ps -a;'''
-          }
-        }
-
+      steps {
+        sh 'ls build/libs/*.jar'
+        sh './gradlew test'
+        echo 'Deploying...'
       }
     }
 
