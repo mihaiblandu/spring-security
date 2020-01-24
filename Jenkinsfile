@@ -21,9 +21,7 @@ echo $HOME'''
 
         stage('Parallel2') {
           steps {
-            sh '''echo $HOME;
-echo \'\\n\';
-cd ;'''
+            sh 'echo $HOME;'
             sh 'docker --version;'
           }
         }
