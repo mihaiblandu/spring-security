@@ -14,6 +14,7 @@ pipeline {
             sh '''ls -la;
 '''
             sh '''cat README.md;
+cat LICENSE;
 '''
           }
         }
