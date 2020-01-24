@@ -61,8 +61,7 @@ cat LICENSE;
     stage('Final Step') {
       steps {
         sh 'docker stop spring-boot-docker'
-        sh '''docker rm spring-boot-docker
-'''
+        sh 'docker rm spring-boot-docker'
       }
     }
 
