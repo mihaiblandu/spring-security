@@ -50,7 +50,9 @@ cat LICENSE;
           steps {
             sh 'docker ps -a'
             sh 'docker build -t spring-boot-docker .'
-            sh 'docker run -p 8083:8083 -p 8443:8443 spring-boot-docker'
+            sh 'docker run -p 8083:8083 -p 8443:8443 --name spring-boot-docker -t spring-boot-docker'
+            sh 'docker stop spring-boot-docker'
+            sh 'docker rm spring-boot-docker'
           }
         }
 
