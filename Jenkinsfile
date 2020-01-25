@@ -24,7 +24,7 @@ cat LICENSE;
             sh 'echo $HOME;'
             sh 'docker --version;'
             sh 'java -version'
-            sh 'gradle -v'
+            sh './gradlew -v'
           }
         }
 
