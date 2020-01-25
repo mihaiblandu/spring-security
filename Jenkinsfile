@@ -42,7 +42,7 @@ cat LICENSE;
         stage('Deploy') {
           steps {
             sh 'ls build/libs/*.jar'
-            sh './gradlew test'
+            sh './gradlew test --info'
             echo 'Deploying...'
           }
         }
