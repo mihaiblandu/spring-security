@@ -6,6 +6,7 @@ pipeline {
         stage('System') {
           steps {
             sh 'pwd'
+            sh 'curl -v'
           }
         }
 
