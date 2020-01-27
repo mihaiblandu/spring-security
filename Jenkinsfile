@@ -6,6 +6,7 @@ pipeline {
         stage('System') {
           steps {
             sh 'pwd'
+            sh 'curl --version'
           }
         }
 
@@ -24,6 +25,7 @@ cat LICENSE;
             sh 'echo $HOME;'
             sh 'docker --version;'
             sh 'java -version'
+            sh './gradlew -v'
           }
         }
 
@@ -42,7 +44,7 @@ cat LICENSE;
         stage('Deploy') {
           steps {
             sh 'ls build/libs/*.jar'
-            sh './gradlew test'
+            sh './gradlew test --info'
             echo 'Deploying...'
           }
         }
