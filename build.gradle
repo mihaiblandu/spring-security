@@ -38,16 +38,22 @@ dependencies {
 // WEB JAVASCRIPT LIBS
 	compile     group: 'org.webjars',               name: 'webjars-locator',  version: '0.32-1'
 	compile     group: 'org.webjars',               name: 'bootstrap',        version: '4.4.1'
+	compile 	group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.1'
 
-	compileOnly 'org.projectlombok:lombok'
+
+	implementation 'org.projectlombok:lombok'
+
+	testImplementation 'io.cucumber:cucumber-java:5.0.0'
+	testImplementation 'io.cucumber:cucumber-junit:5.0.0'
+
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	testImplementation 'org.mockito:mockito-core:3.2.4'
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
 test {
 	println 'Test start.'
 	useJUnitPlatform()
+
 	println 'Test is done succesfuly'
 }
