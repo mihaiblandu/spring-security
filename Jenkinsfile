@@ -65,7 +65,6 @@ cat LICENSE;
         sh 'docker stop spring-boot-docker'
         sh 'docker rm spring-boot-docker'
         sh 'docker stop discovery-service'
-        sh 'docker rm discovery-service'
       }
     }
 
